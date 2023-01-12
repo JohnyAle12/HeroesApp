@@ -31,7 +31,7 @@ export const Hero = () => {
         </div>
         <div className="col-8">
         <div className="card-body">
-                <h3 className="card-title">
+                <h3 className="card-title animate__animated animate__pulse">
                     {superhero}
                 </h3>
                 <p className="card-text">{alter_ego}</p>
