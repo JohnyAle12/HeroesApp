@@ -8,7 +8,9 @@ export const HeroList = ({ publisher }: { publisher:string }) => {
     return (
         <div className="row">
             { heroes.map((heroe) => (
-                <HeroCard key={ heroe.id } { ...heroe } />
+                <div className="col-4 mt-3">
+                    <HeroCard key={ heroe.id } { ...heroe } />
+                </div>
             )) }
         </div>
     )
