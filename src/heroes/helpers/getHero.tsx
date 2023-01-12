@@ -9,3 +9,7 @@ export const getHero = (publisher: string) => {
 
     return heroes.filter( heroe => heroe.publisher === publisher);
 }
+
+export const getHeroById = (id?: string) => {
+    return heroes.filter( heroe => heroe.id === id);
+}
