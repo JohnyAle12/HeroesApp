@@ -1,6 +1,7 @@
 export type ContextApp = {
     state: State
     login?: (name: string) => void
+    logout?: () => void
 }
 
 export type State = {
@@ -10,7 +11,7 @@ export type State = {
 
 export type Action = {
     type: string,
-    payload: {
+    payload?: {
         id: number,
         name: string
     }
