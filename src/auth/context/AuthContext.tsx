@@ -1,17 +1,10 @@
 import { createContext } from "react";
+import { ContextApp } from "../interfaces/types";
 
-type ContextApp = {
-    user?: UserApp
-    setUser?: React.SetStateAction<any>
+const context: ContextApp = {
+    state: {
+        logged: false
+    }
 }
-
-type UserApp = {
-    id: number,
-    name: string,
-    email: string,
-    token: string,
-}
-
-const context: ContextApp = {}
 
 export const AuthContext = createContext(context);

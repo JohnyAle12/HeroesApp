@@ -1,14 +1,5 @@
+import { Action, State } from "../interfaces/types";
 import { types } from "../types/Types";
-
-type State = {
-    logged: boolean,
-    name?: string,
-}
-
-type Action = {
-    type: string,
-    payload: string
-}
 
 export const authReducer = (state: State, action: Action): State => {
     switch (action.type) {
@@ -16,11 +7,10 @@ export const authReducer = (state: State, action: Action): State => {
             return {
                 ...state,
                 logged: true,
-                name: action.payload
+                name: action.payload.name
             };
         case types.logout:
             return {
-                ...state,
                 logged: false
             };
         default:
