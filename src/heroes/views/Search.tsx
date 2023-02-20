@@ -35,7 +35,7 @@ export const Search = () => {
         <div className="col-5">
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form aria-label="searchForm" onSubmit={onSearchSubmit}>
             <input
               type="text"
               className="form-control"
@@ -61,7 +61,7 @@ export const Search = () => {
           ) }
 
           { (heroes.length < 1 && querySearch) && (
-            <div className="alert alert-danger">No hero with <strong>"{querySearch}"</strong> word</div>
+            <div aria-label="alert-danger" className="alert alert-danger">No hero with <strong>"{querySearch}"</strong> word</div>
           ) }
 
           { heroes.map( hero => (
