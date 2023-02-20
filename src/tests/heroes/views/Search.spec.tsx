@@ -23,7 +23,7 @@ describe('<Search />', () => {
             <Search />
         </MemoryRouter>)
 
-        const input = screen.getByRole('textbox')
+        const input: HTMLInputElement = screen.getByRole('textbox')
         expect(input.value).toBe('batman')
         expect(screen.getByText('Batman')).toBeTruthy()
         expect(screen.getByText('Bruce Wayne')).toBeTruthy()
